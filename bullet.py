@@ -12,7 +12,10 @@ class Bullet(Sprite):
         # Create a bullet rect at (0, 0) and then set correct position.
         self.rect = pygame.Rect(0, 0, ai_settings.bullet_width,
                                 ai_settings.bullet_height)
+        
+        # Set original position of the bullet to the right canon of the ship
         self.rect.centerx = ship.rect.centerx
+
         self.rect.top = ship.rect.top
 
         # Store the bullet's position as a decimal value.
